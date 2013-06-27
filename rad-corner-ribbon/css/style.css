@@ -1,0 +1,18 @@
+#rad-corner-ribbon{
+	position: fixed;
+	top:0;
+	right: 0;
+	/* Reset, just in case the theme has weird link styles */
+	background-color: transparent;
+	border: none;
+	margin:0;
+	padding:0;
+	width: 159px;
+	height: 160px;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 9999999;
+}
+.admin-bar #rad-corner-ribbon{
+	top:28px;
+}
