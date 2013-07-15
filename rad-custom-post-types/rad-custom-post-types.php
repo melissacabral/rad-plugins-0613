@@ -26,6 +26,27 @@ function mmc_register_post_type(){
 		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 
 			'custom-fields', 'revisions' ),
 	) );
+
+	//add "brand" sorting to our products
+	register_taxonomy( 'brand', 'product', array(
+		'hierarchical' => true, //act like categories
+		'rewrite' => array( 'slug' => 'brands' ),
+		'labels' => array( 
+			'name' => 'Brands',
+			'singular-name' => 'Brand',
+			'add_new_item' => 'Add New Brand',
+		),
+	) );
+	//add "feature" sorting to our products
+	register_taxonomy( 'feature', 'product', array(
+		'hierarchical' => false, //act like categories
+		'rewrite' => array( 'slug' => 'features' ),
+		'labels' => array( 
+			'name' => 'Features',
+			'singular-name' => 'Feature',
+			'add_new_item' => 'Add New feature',
+		),
+	) );
 }
 
 /**
