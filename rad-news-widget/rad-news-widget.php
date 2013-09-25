@@ -98,7 +98,7 @@ class Rad_News_Widget extends WP_Widget{
 		<?php endif;
 
 		//clean up
-		wp_reset_query();	
+		wp_reset_postdata();	
 
 		echo $after_widget;
 	}
